@@ -32,6 +32,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.environment.webserver.AppServer;
 import org.openqa.selenium.environment.webserver.JettyAppServer;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.testing.Ignore;
 import org.openqa.selenium.testing.JUnit4TestBase;
 import org.openqa.selenium.testing.NeedsLocalEnvironment;
 
@@ -75,6 +76,7 @@ public class CrossDomainTest extends JUnit4TestBase {
   }
 
   @Test
+  @Ignore(travis = true)
   public void canSwitchToAFrameFromAnotherDomain() {
     setupCrossDomainFrameTest();
 

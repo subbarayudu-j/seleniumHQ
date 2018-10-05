@@ -37,6 +37,7 @@ import org.openqa.selenium.testing.JUnit4TestBase;
 import org.openqa.selenium.testing.NeedsLocalEnvironment;
 
 @NeedsLocalEnvironment(reason = "Uses a local server")
+@Ignore(travis = true)
 public class CrossDomainTest extends JUnit4TestBase {
 
   private static AppServer otherServer;
@@ -76,7 +77,6 @@ public class CrossDomainTest extends JUnit4TestBase {
   }
 
   @Test
-  @Ignore(travis = true)
   public void canSwitchToAFrameFromAnotherDomain() {
     setupCrossDomainFrameTest();
 

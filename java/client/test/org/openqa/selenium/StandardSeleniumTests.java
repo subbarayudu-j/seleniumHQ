@@ -33,13 +33,13 @@ import org.openqa.selenium.support.ui.SelectElementTest;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
     //AlertsTest.class,
-    AtomsInjectionTest.class,
-    AvailableLogsTest.class,
-    ByTest.class,
-    ChildrenFindingTest.class/*,
+    //AtomsInjectionTest.class,
+    //AvailableLogsTest.class,
+    //ByTest.class,
+    //ChildrenFindingTest.class,
     ClearTest.class,
     ClickScrollingTest.class,
-    ClickTest.class,
+    ClickTest.class/*,
     CookieImplementationTest.class,
     ContentEditableTest.class,
     CorrectEventFiringTest.class,

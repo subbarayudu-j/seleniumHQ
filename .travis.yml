@@ -54,10 +54,6 @@ matrix:
     - env: BUCK="test safari-test"
       <<: *macos
       <<: *java
-    - env: MARIONETTE=1 BUCK="test firefox-test"
-      <<: *linux
-      <<: *java
-      <<: *firefox-nightly
 before_install:
   - if [[ $TRAVIS_OS_NAME != 'osx' ]]; then ./scripts/travis/before_install.sh; fi
 install:

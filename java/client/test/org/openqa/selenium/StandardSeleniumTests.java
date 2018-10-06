@@ -32,7 +32,7 @@ import org.openqa.selenium.support.ui.SelectElementTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-    AlertsTest.class,
+    AlertsTest.class/*,
     AtomsInjectionTest.class,
     AvailableLogsTest.class,
     ByTest.class,
@@ -85,7 +85,7 @@ import org.openqa.selenium.support.ui.SelectElementTest;
     WindowTest.class,
 
     Html5Tests.class,
-    InteractionTests.class
+    InteractionTests.class*/
 })
 public class StandardSeleniumTests {
 

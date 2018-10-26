@@ -32,18 +32,18 @@ import org.openqa.selenium.support.ui.SelectElementTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-    //AlertsTest.class,
-    //AtomsInjectionTest.class,
-    //AvailableLogsTest.class,
-    //ByTest.class,
-    //ChildrenFindingTest.class,
-    //ClearTest.class,
-    //ClickScrollingTest.class,
-    //ClickTest.class,
-    //CookieImplementationTest.class,
-    //ContentEditableTest.class,
-    //CorrectEventFiringTest.class,
-    ElementAttributeTest.class /*,
+    AlertsTest.class,
+    AtomsInjectionTest.class,
+    AvailableLogsTest.class,
+    ByTest.class,
+    ChildrenFindingTest.class,
+    ClearTest.class,
+    ClickScrollingTest.class,
+    ClickTest.class,
+    CookieImplementationTest.class,
+    ContentEditableTest.class,
+    CorrectEventFiringTest.class,
+    ElementAttributeTest.class,
     ElementEqualityTest.class,
     ElementFindingTest.class,
     ElementSelectingTest.class,
@@ -85,7 +85,7 @@ import org.openqa.selenium.support.ui.SelectElementTest;
     WindowTest.class,
 
     Html5Tests.class,
-    InteractionTests.class*/
+    InteractionTests.class
 })
 public class StandardSeleniumTests {
 

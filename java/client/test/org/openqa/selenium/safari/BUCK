@@ -1,7 +1,8 @@
 java_test(name = 'safari',
   srcs = [ 'SafariDriverTests.java' ],
   vm_args = [
-    '-Dselenium.browser=safari -Dselenium.safari.tp=true',
+    '-Dselenium.browser=safari',
+    '-Dselenium.safari.tp=true',
   ],
   deps = [
     ':tests',

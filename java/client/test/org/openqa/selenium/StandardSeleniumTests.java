@@ -43,7 +43,7 @@ import org.openqa.selenium.support.ui.SelectElementTest;
     //CookieImplementationTest.class,
     //ContentEditableTest.class,
     //CorrectEventFiringTest.class,
-    ElementAttributeTest.class/*,
+    ElementAttributeTest.class /*,
     ElementEqualityTest.class,
     ElementFindingTest.class,
     ElementSelectingTest.class,

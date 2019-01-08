@@ -23,8 +23,8 @@ module Selenium
   module WebDriver
     module Edge
       describe Service do
-        let(:resp) { {'sessionId' => 'foo', 'value' => Remote::Capabilities.edge.as_json} }
-        let(:service) { instance_double(Service, start: true, uri: 'http://example.com', host: 'localhost', binary_path: nil) }
+        let(:resp) { {'value' => {'sessionId' => 'foo', 'capabilities' => Remote::Capabilities.edge.as_json}} }
+        let(:service) { double(Service, start: true, uri: 'http://example.com', host: 'localhost', binary_path: nil) }
         let(:caps) { Remote::Capabilities.edge }
         let(:http) { instance_double(Remote::Http::Default, call: resp).as_null_object }
 

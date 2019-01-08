@@ -30,7 +30,7 @@ module Selenium
         include DriverExtensions::TakesScreenshot
 
         def initialize(opts = {})
-          opts[:desired_capabilities] ||= Remote::W3C::Capabilities.edge
+          opts[:desired_capabilities] ||= Remote::Capabilities.edge
 
           unless opts.key?(:url)
             driver_path = opts.delete(:driver_path) || Edge.driver_path
@@ -44,16 +44,13 @@ module Selenium
           end
 
           listener = opts.delete(:listener)
+          desired_capabilities = opts.delete(:desired_capabilities)
 
           # Edge is mostly using W3C dialect, but a request to
           # create session responds with OSS-like body,
           # so we need to force W3C implementation.
-          desired_capabilities = opts.delete(:desired_capabilities)
-          bridge = Remote::Bridge.new(opts)
-          capabilities = bridge.create_session(desired_capabilities)
-
-          WebDriver.logger.info 'Forcing W3C dialect.'
-          @bridge = Remote::W3C::Bridge.new(capabilities, bridge.session_id, opts)
+          @bridge = Remote::Bridge.new(opts)
+          @bridge.create_session(desired_capabilities)
           @bridge.extend Edge::Bridge
 
           super(@bridge, listener: listener)

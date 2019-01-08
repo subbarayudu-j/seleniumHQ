@@ -46,12 +46,11 @@ module Selenium
             end
 
             listener = opts.delete(:listener)
-            WebDriver.logger.info 'Skipping handshake as we know it is W3C.'
             desired_capabilities = opts.delete(:desired_capabilities)
-            bridge = Remote::Bridge.new(opts)
-            capabilities = bridge.create_session(desired_capabilities)
-            @bridge = Remote::W3C::Bridge.new(capabilities, bridge.session_id, opts)
+
+            @bridge = Remote::Bridge.new(opts)
             @bridge.extend Marionette::Bridge
+            @bridge.create_session(desired_capabilities)
 
             super(@bridge, listener: listener)
           end
@@ -69,7 +68,7 @@ module Selenium
           private
 
           def create_capabilities(opts)
-            caps = opts.delete(:desired_capabilities) { Remote::W3C::Capabilities.firefox }
+            caps = opts.delete(:desired_capabilities) { Remote::Capabilities.firefox }
             options = opts.delete(:options) { Options.new }
 
             firefox_options = opts.delete(:firefox_options)

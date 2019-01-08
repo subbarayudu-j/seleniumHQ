@@ -23,7 +23,7 @@ module Selenium
   module WebDriver
     module Firefox
       describe Service do
-        let(:resp) { {'value' => {'sessionId' => 'foo', 'value' => Remote::Capabilities.firefox.as_json}} }
+        let(:resp) { {'value' => {'sessionId' => 'foo', 'capabilities' => Remote::Capabilities.firefox.as_json}} }
         let(:service) { instance_double(Service, start: true, uri: 'http://example.com') }
         let(:caps) { Remote::Capabilities.firefox }
         let(:http) { instance_double(Remote::Http::Default, call: resp).as_null_object }
